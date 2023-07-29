@@ -1,0 +1,43 @@
+:root{
+    --main--color: #f09610;
+    --second--color: #005d6f;
+}
+.font{
+    font-family: "Almarai",sans-serif;
+    font-size: 20px;
+}
+body{
+    background-color: #eeeeee;
+}
+.btn-sans{
+    border: 2px solid var(--main--color);
+    background-color: #ffffff00;
+    color: var(--main--color);
+    border-radius: 10px;
+    transition: all 0.5s;
+}
+.btn-sans:hover{
+    background-color: var(--main--color);
+    color: rgb(37, 37, 37);
+    transform: scale(1.1);
+}
+.in:focus{
+    border-color: var(--main--color);
+    outline: 0;
+     box-shadow: 0 0 0 0.20rem var(--main--color);
+}
+.logo{
+    color: var(--main--color);
+}
+.line{
+    width: 200px;
+    height: 2px;
+    background-color: var(--main--color);
+}
+.title{
+    color: var(--second--color);
+}
+.img-con{
+    width:200px;
+    height: 150px;
+}
