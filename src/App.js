@@ -7,30 +7,29 @@ import { useState } from "react";
 import { data } from "./data";
 
 function App() {
-  const [stateData,setData] = useState(data);
-  const catgorys = ["الكل",...new Set(data.map((i)=>i.catgory))]
-  console.log(catgorys)
-  let fillterItems = (cat)=>{
-    if(cat === "الكل"){
+  const [stateData, setData] = useState(data);
+  const catgorys = ["الكل", ...new Set(data.map((i) => i.catgory))];
+  let fillterItems = (cat) => {
+    if (cat === "الكل") {
       setData(data);
-    }else {
-      const newItmes = data.filter((e)=>e.catgory === cat)
-      setData(newItmes)
+    } else {
+      const newItmes = data.filter((e) => e.catgory === cat);
+      setData(newItmes);
     }
-  }
-  let wordFilter = (w)=>{
-    if(w !== ""){
-      const newWord = data.filter((e)=>e.titles === w)
-      setData(newWord)
+  };
+  let wordFilter = (w) => {
+    if (w !== "") {
+      const newWord = data.filter((e) => e.titles === w);
+      setData(newWord);
     }
-  }
+  };
   return (
     <div className="font">
-      <Header wordFilter={wordFilter}/>
+      <Header wordFilter={wordFilter} />
       <Container>
-        <Title/>
-        <ButtonGroub fillterItems={fillterItems} catgorys={catgorys}/>
-        <Cards items={stateData}/>
+        <Title />
+        <ButtonGroub fillterItems={fillterItems} catgorys={catgorys} />
+        <Cards items={stateData} />
       </Container>
     </div>
   );
